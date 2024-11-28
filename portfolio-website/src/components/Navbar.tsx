@@ -4,31 +4,37 @@ import { Stack,
         Toolbar, 
         IconButton, 
         Typography,
-        Button,
-        Link } from '@mui/material';
+        Button } from '@mui/material';
 import { Home } from '@mui/icons-material';
+
+import { HomePage } from '../pages/HomePage';
+import { SkillsPage } from '../pages/SkillsPage';
+import { BiographyPage } from '../pages/BiographyPage';
+
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 
 
 export const Navbar: React.FC = () => {
     return (
         <AppBar color='inherit'>
             <Toolbar>
-                <IconButton>
-                    <Home />
-                </IconButton>
-                <Typography 
-                    variant='h6'
-                    component='div' 
-                    sx={{
-                        flexGrow: 1,
-                        fontFamily: 'Jona'
-                    }}>
-                        PORTFOLIO
-                </Typography>
-                <Stack direction='row' spacing={2}>
-                        <Button>Hobbies</Button>
-                        <Button>Biography</Button>
-                </Stack>
+                    <IconButton component={Link} to='/'>
+                            <Home />
+                    </IconButton>
+                    <Typography 
+                        variant='h6'
+                        component='div' 
+                        sx={{
+                            flexGrow: 1,
+                            fontFamily: 'Jona'
+                        }}>
+                            PORTFOLIO
+                    </Typography>
+                    <Stack direction='row' spacing={3}>
+                            <Button component={Link} to='/skills'><b> Skills </b></Button>
+                            <Button component={Link} to='/biography'><b> Biography </b></Button>
+                    </Stack>
             </Toolbar>
         </AppBar>
     )
