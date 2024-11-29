@@ -15,16 +15,17 @@ export const MainIntro: React.FC = () => {
                 },
                 height: 600,
                 mt: 15,
-                bgcolor: 'primary.light',
-            }}>
+                bgcolor: 'info.dark'
+            }}
+            elevation={22}>
             <Typography
-                variant='h2'
+                variant='h4'
                 component='div'
-                textAlign='center'
+                textAlign='left'
                 fontFamily='Jaro'
                 color='white'
             >
-                Christian   Alvarez
+                Hi. I'm Christian
             </Typography>
             </Paper>
         </Box>
