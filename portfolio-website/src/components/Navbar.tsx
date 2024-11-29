@@ -11,7 +11,7 @@ import { HomePage } from '../pages/HomePage';
 import { SkillsPage } from '../pages/SkillsPage';
 import { BiographyPage } from '../pages/BiographyPage';
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
         <AppBar color='inherit'>
             <Toolbar>
                     <IconButton component={Link} to='/'>
-                            <Home />
+                            <Home color='info' />
                     </IconButton>
                     <Typography 
                         variant='h6'

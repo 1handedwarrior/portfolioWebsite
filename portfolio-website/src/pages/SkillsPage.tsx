@@ -39,7 +39,7 @@ export const SkillsPage: React.FC = () => {
                         Programming Languages
                 </Typography>
             </Paper>
-            <Grid2 container pt={10} spacing={2}>
+            <Grid2 container pt={10} spacing={2} justifyContent='center'>
                 <Grid2 size={{
                     xs: 12,
                     sm: 6,
