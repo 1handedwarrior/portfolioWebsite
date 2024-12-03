@@ -1,6 +1,12 @@
 import React from 'react';
 import { ProfilePic } from './ProfilePic';
-import { Paper, Typography, Box } from '@mui/material';
+import { Paper,
+         Typography,
+         Box,
+         Card,
+         CardHeader,
+         CardContent,
+         Stack } from '@mui/material';
 
 
 export const MainIntro: React.FC = () => {
@@ -21,17 +27,17 @@ export const MainIntro: React.FC = () => {
             }}
             elevation={22}>
                 <ProfilePic />
-            <Typography
-                variant='h4'
-                component='div'
-                textAlign='right'
-                fontFamily='Parkinsans'
-                color='info'
-                mt={2}
-                mr={1}
-            >
-                Hi. I'm Christian
-            </Typography>
+                <Typography
+                    variant='h4'
+                    component='div'
+                    textAlign='right'
+                    fontFamily='Parkinsans'
+                    color='info'
+                    mt={2}
+                    mr={1}
+                >
+                    Hi. I'm Christian
+                </Typography>
             </Paper>
         </Box>
     )

@@ -1,13 +1,12 @@
 import { Avatar } from '@mui/material';
-import Selfie from '../images/Selfie.jpeg';
+import selfie from '../images/selfiePic.jpeg';
 import React from 'react';
 
 
 export const ProfilePic: React.FC = () => {
     return (
-        <>
             <Avatar 
-                src={Selfie}
+                src={selfie}
                 component='span'
                 sx={{
                     width: 200,
@@ -15,6 +14,5 @@ export const ProfilePic: React.FC = () => {
                     mt: 2,
                     ml: 2,
                 }}/>
-        </>
     )
 };

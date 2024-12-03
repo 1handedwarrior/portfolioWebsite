@@ -8,10 +8,11 @@ import { Paper,
          Grid2,
          Typography } from '@mui/material';
 import JavascriptLogo from '../images/javascript.png';
-import PythonLogo from '../images/python.jpeg';
+import PythonLogo from '../images/pythonLogo.jpeg';
 import ReactLogo from '../images/react.png';
 import HtmlCssLogos from '../images/htmlCSS.png';
-import TypescriptLogo from '../images/typescript.png';
+import TypescriptLogo from '../images/tsLogo.png'
+
 
 
 export const SkillsPage: React.FC = () => {
@@ -22,9 +23,8 @@ export const SkillsPage: React.FC = () => {
                 elevation={20}
                 sx={{
                 mt: 10,
-                ml: 12,
-                mr: 12,
                 p: 1,
+                mx: 8,
                 height: 'auto',
                 width: 'auto',
                 display: 'flex',
@@ -34,21 +34,29 @@ export const SkillsPage: React.FC = () => {
                     variant='h3'
                     component='div'
                     sx={{
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        fontFamily: 'Parkinsans'
                     }}>
                         Programming Languages
                 </Typography>
             </Paper>
-            <Grid2 container pt={10} spacing={2} justifyContent='center'>
+            <Paper sx={{
+                m: 10,
+                bgcolor: 'lightgray'
+            }}
+                elevation={20}>
+            <Grid2 container p={7} spacing={5} justifyContent='center'>
                 <Grid2 size={{
                     xs: 12,
                     sm: 6,
                     md: 3
                 }}>
-                    <Card variant='elevation'>
+                    <Card variant='elevation' sx={{
+                        maxWidth: '750px',
+                        maxHeight: '750px',
+                    }}>
                         <CardHeader title='Javascript' />
-                        <CardMedia 
-                            sx={{ height: '100%', width: '100%' }}component='img' 
+                        <CardMedia component='img' 
                             image={JavascriptLogo}
                             alt='javascript logo' />
                         <CardContent>
@@ -63,10 +71,13 @@ export const SkillsPage: React.FC = () => {
                     sm: 6,
                     md: 3
                 }}>
-                    <Card>
+                    <Card sx={{
+                        maxWidth: '750px',
+                        maxHeight: '750px', 
+                    }}>
                         <CardHeader title='Python'/>
                         <CardMedia 
-                        sx={{ height: '400px', width: '100%' }} component='img' 
+                         component='img' 
                         image={PythonLogo} 
                         alt='python logo'/>
                         <CardContent>
@@ -81,7 +92,10 @@ export const SkillsPage: React.FC = () => {
                     sm: 6,
                     md: 3
                 }}>
-                    <Card>
+                    <Card sx={{
+                        maxWidth: '750px',
+                        maxHeight: '750px',
+                    }}>
                         <CardHeader title='React'/>
                         <CardMedia 
                             sx={{ height: '100%', width: '100%' }}
@@ -100,10 +114,13 @@ export const SkillsPage: React.FC = () => {
                     sm: 6,
                     md: 3
                 }}>
-                    <Card>
+                    <Card sx={{
+                        maxWidth: '750px',
+                        maxHeight: '750px',
+                    }}>
                         <CardHeader title='Typescript'/>
                         <CardMedia 
-                            sx={{ height: '300px', width: '100%' }}
+                            
                             component='img' 
                             image={TypescriptLogo} 
                             alt='Typescript logo' />
@@ -119,7 +136,10 @@ export const SkillsPage: React.FC = () => {
                     sm: 6,
                     md: 3
                 }}>
-                    <Card>
+                    <Card sx={{
+                        maxWidth: '750px',
+                        maxHeight: '750px',
+                    }}>
                         <CardHeader title='HTML / CSS' />
                         <CardMedia 
                             sx={{ height: '100%', width: '100%' }}
@@ -134,6 +154,7 @@ export const SkillsPage: React.FC = () => {
                     </Card>
                 </Grid2>
             </Grid2>
+            </Paper>
         </>
     )
 };
