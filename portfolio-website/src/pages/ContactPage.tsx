@@ -1,23 +1,26 @@
+import { Email, GitHub, Instagram } from '@mui/icons-material';
 import { Navbar } from '../components/Navbar';
-import { Box, Typography } from '@mui/material';
+import { Box, Card, CardHeader, CardContent, Stack, Typography, Divider } from '@mui/material';
 
-export const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () => {
     return (
         <>
             <Navbar />
                 <Box bgcolor='info.main' sx={{
-                    mt: 10,
+                    mt: 15,
                     mx: 'auto',
-                    height: '25rem',
+                    height: '28rem',
                     width: '90%',
-                    display: 'flex',
-                    justifyContent: 'center',
                     boxShadow: 8,
                     borderRadius: 0,
                     outlineOffset: '1px',
                     outline: ' 5px grey solid'
                 }}>
-                        <Box>
+                    <Stack direction='column' spacing={1}>
+                        <Box sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}>
                             <Typography 
                                 variant='h2'
                                 component='header'
@@ -29,7 +32,41 @@ export const ContactPage: React.FC = () => {
                                 Get in touch! 
                             </Typography>
                         </Box>
+                        <Stack direction='row' spacing={4} sx={{
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }}>
+                                <Card sx={{
+                                    width: '40%',
+                                    p: 1,
+                                    boxShadow: 20}}>
+
+                                    <CardHeader fontFamily='Parkinsans' title='Email' /><hr />
+                                    <CardContent>
+                                        <Typography fontFamily='Parkinsans' variant='button'>
+                                            You can reach me via email at <br />
+                                            <Email/>Calvarez1007 @yahoo.com
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                                <Card sx={{
+                                    width: '40%',
+                                    p: 1,
+                                    boxShadow: 20 }}>
+                                    <CardHeader fontFamily='Parkinsans' title='Socials' /><hr />
+                                    <CardContent>
+                                        <Typography fontFamily='Parkinsans' variant='button'>
+                                            <GitHub />Find me on GitHub @1HandedWarrior <br />
+                                            <Divider />
+                                            <Instagram/>Find me on Instagram @slyandlethal
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                        </Stack>
+                    </Stack>
                 </Box>
         </>
     )
 };
+
+export default ContactPage;

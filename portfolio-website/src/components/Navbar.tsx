@@ -13,7 +13,14 @@ import { Home, Menu as MenuIcon } from '@mui/icons-material';
 
 
 export const Navbar: React.FC = () => {
-    const [open, setOpen] = useState<boolean>(false);
+    const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+    const open = Boolean(anchorEl);
+    const handleMenuClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(e.currentTarget);
+    }
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
         <AppBar color='inherit'>
@@ -22,7 +29,7 @@ export const Navbar: React.FC = () => {
                             <Home color='info' />
                     </IconButton>
                     <Typography
-                        fontSize='medium'
+                        fontSize='large'
                         variant='h6'
                         component='div' 
                         sx={{
@@ -32,10 +39,15 @@ export const Navbar: React.FC = () => {
                             PORTFOLIO
                     </Typography>
 
+                    {/* Worth mentioning, onClick for the menu had to be on the 
+                    IconButton rather than the MenuIcon itself*/}
+
                     <Stack direction='row' spacing={4}>
-                            <IconButton>
-                                <MenuIcon 
-                                    onClick={e => setOpen(true)}
+                            <IconButton onClick={handleMenuClick}>
+                                <MenuIcon
+                                    aria-haspopup={true}
+                                    aria-expanded={open ? true : undefined}
+                                    aria-controls={open ? 'hamburgerMenu' : undefined}
                                     sx={{
                                         display: {
                                             xs: 'block',
@@ -43,8 +55,17 @@ export const Navbar: React.FC = () => {
                                         }
                                     }}/>
                             </IconButton>
-                            <Menu 
-                                onClose={ e => setOpen(false)} 
+                            <Menu
+                                id='hamburgerMenu'
+                                MenuListProps={{
+                                    'aria-labelledby': 'hamburgerMenu'
+                                }}
+                                anchorEl={anchorEl}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'right',
+                                }}
+                                onClose={handleClose} 
                                 open={open}
                                 >
                                 <MenuItem component={Link} to='/skills'>Skills</MenuItem>
@@ -61,9 +82,11 @@ export const Navbar: React.FC = () => {
                             <Button component={Link} to='/skills'>
                                 <Typography fontFamily='Parkinsans'>Skills</Typography>
                             </Button>
+
                             <Button component={Link} to='/biography'>
                                 <Typography fontFamily='Parkinsans'>Biography</Typography>
                             </Button>
+
                             <Button component={Link} to='/contact'>
                                 <Typography fontFamily='Parkinsans'>Contact</Typography>
                             </Button>

@@ -15,7 +15,7 @@ import TypescriptLogo from '../images/tsLogo.png'
 
 
 
-export const SkillsPage: React.FC = () => {
+const SkillsPage: React.FC = () => {
     return (
         <>
             <Navbar />
@@ -158,3 +158,5 @@ export const SkillsPage: React.FC = () => {
         </>
     )
 };
+
+export default SkillsPage;
