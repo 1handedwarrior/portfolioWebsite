@@ -51,7 +51,9 @@ export const Navbar: React.FC = () => {
                                     sx={{
                                         display: {
                                             xs: 'block',
-                                            sm: 'none'
+                                            sm: 'none',
+                                            width: '40px',
+                                            height: '50px',
                                         }
                                     }}/>
                             </IconButton>
