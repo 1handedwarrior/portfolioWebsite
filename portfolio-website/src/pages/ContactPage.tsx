@@ -34,14 +34,14 @@ const ContactPage: React.FC = () => {
                         </Box>
                         <Stack direction='row' spacing={4} sx={{
                             display: 'flex',
-                            justifyContent: 'center'
-                        }}>
+                            justifyContent: 'center' }}>
                                 <Card sx={{
                                     width: '40%',
                                     p: 1,
                                     boxShadow: 20}}>
 
-                                    <CardHeader fontFamily='Parkinsans' title='Email' /><hr />
+                                    <CardHeader fontFamily='Parkinsans' title='Email' />
+                                    <Divider color='black'/>
                                     <CardContent>
                                         <Typography fontFamily='Parkinsans' variant='button'>
                                             You can reach me via email at <br />
@@ -53,7 +53,8 @@ const ContactPage: React.FC = () => {
                                     width: '40%',
                                     p: 1,
                                     boxShadow: 20 }}>
-                                    <CardHeader fontFamily='Parkinsans' title='Socials' /><hr />
+                                    <CardHeader fontFamily='Parkinsans' title='Socials' />
+                                    <Divider color='black'/>
                                     <CardContent>
                                         <Typography fontFamily='Parkinsans' variant='button'>
                                             <GitHub />Find me on GitHub @1HandedWarrior <br />
