@@ -5,6 +5,7 @@ import { Paper,
         CardHeader, 
         CardMedia, 
         CardContent, 
+        Box,
         styled } from '@mui/material';
 
 import JavascriptLogo from '../images/javascript.png';
@@ -12,6 +13,7 @@ import PythonLogo from '../images/pythonLogo.jpeg';
 import ReactLogo from '../images/react.png';
 import HtmlCssLogos from '../images/htmlCSS.png';
 import TypescriptLogo from '../images/tsLogo.png'
+import GitLogo from '../images/gitLogo.png'
 
 
 
@@ -22,12 +24,14 @@ export const SkillCards: React.FC = () => {
     });
     return (
         <>
-        <Paper 
+        <Box display='flex' justifyContent='center'>
+        <Paper
             elevation={20}
             sx={{
+            px: 10,
+            py: 1,
             mt: 10,
-            p: 1,
-            mx: 8,
+            mx: 13,
             height: 'auto',
             width: 'auto',
             display: 'flex',
@@ -41,9 +45,10 @@ export const SkillCards: React.FC = () => {
                     textAlign: 'center',
                     fontFamily: 'Parkinsans'
                 }}>
-                    Programming Languages
+                    Languages
             </Typography>
         </Paper>
+        </Box>
         <Paper
             elevation={20}
             sx={{
@@ -112,13 +117,30 @@ export const SkillCards: React.FC = () => {
                     <MyCard>
                         <CardHeader title='Typescript'/>
                         <CardMedia 
-                            
                             component='img' 
                             image={TypescriptLogo} 
                             alt='Typescript logo' />
                         <CardContent>
                             <Typography variant='body2'>
                                 TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. TypeScript also allows specifying the types of data being passed around within the code, and has the ability to report errors when the types don't match
+                            </Typography>
+                        </CardContent>
+                    </MyCard>
+                </Grid2>
+                <Grid2 size={{
+                    xs: 12,
+                    sm: 6,
+                    md: 4
+                }}>
+                    <MyCard>
+                        <CardHeader title='Git'/>
+                        <CardMedia
+                            component='img' 
+                            image={GitLogo} 
+                            alt='git dvcs logo' />
+                        <CardContent>
+                            <Typography variant='body2'>
+                            Git is a free, open-source distributed version control system that's used to track changes to computer files, especially source code in software development. It's the most widely used VCS in the world and is considered the modern standard for software development
                             </Typography>
                         </CardContent>
                     </MyCard>
