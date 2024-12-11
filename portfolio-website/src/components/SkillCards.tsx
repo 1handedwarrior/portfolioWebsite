@@ -14,6 +14,7 @@ import ReactLogo from '../images/react.png';
 import HtmlCssLogos from '../images/htmlCSS.png';
 import TypescriptLogo from '../images/tsLogo.png'
 import GitLogo from '../images/gitLogo.png'
+import MuiLogo from '../images/muiLogo.jpeg'
 
 
 
@@ -105,6 +106,24 @@ export const SkillCards: React.FC = () => {
                         <CardContent>
                             <Typography variant='body2'>
                                 React is a JavaScript library primarily used for building user interfaces (UI) for web applications, allowing developers to create dynamic and interactive components that can be easily combined to construct complex web pages, particularly for single-page applications where data updates without full page reloads
+                            </Typography>
+                        </CardContent>
+                    </MyCard>
+                </Grid2>
+                <Grid2 size={{
+                    xs: 12,
+                    sm: 6,
+                    md: 4
+                }}>
+                    <MyCard>
+                        <CardHeader title='Material UI'/>
+                        <CardMedia
+                            component='img' 
+                            image={MuiLogo} 
+                            alt='Material UI logo' />
+                        <CardContent>
+                            <Typography variant='body2'>
+                                Material UI is an open-source React component library that implements Google's Material Design guidelines, providing a collection of pre-built UI components like buttons, cards, and menus that developers can easily integrate into their React applications, allowing them to build visually consistent and user-friendly interfaces with a familiar Google aesthetic
                             </Typography>
                         </CardContent>
                     </MyCard>
